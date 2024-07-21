@@ -43,16 +43,24 @@ return [
         ],
 
         'mysql' => [
-            'driver' => 'mysql',
-            'url' => env('DB_URL'),
-            'host' => env('DB_HOST', '127.0.0.1'),
-            'port' => env('DB_PORT', '3306'),
+            'read' => [
+                'host' => [
+                    'database-2.cluster-ro-cz8u6q66kiyy.eu-central-1.rds.amazonaws.com',
+                ],
+            ],
+            'write' => [
+                'host' => [
+                    'database-2.cluster-cz8u6q66kiyy.eu-central-1.rds.amazonaws.com',
+                ],
+            ],
+            'sticky' => true,
+
             'database' => env('DB_DATABASE', 'laravel'),
-            'username' => env('DB_USERNAME', 'root'),
-            'password' => env('DB_PASSWORD', ''),
+            'username' => env('DB_USERNAME', 'admin'),
+            'password' => env('DB_PASSWORD', '159753abC+'),
             'unix_socket' => env('DB_SOCKET', ''),
             'charset' => env('DB_CHARSET', 'utf8mb4'),
-            'collation' => env('DB_COLLATION', 'utf8mb4_unicode_ci'),
+            'collation' => env('DB_COLLATION', 'utf8mb4_0900_ai_ci'),
             'prefix' => '',
             'prefix_indexes' => true,
             'strict' => true,
