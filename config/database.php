@@ -43,6 +43,7 @@ return [
         ],
 
         'mysql' => [
+            'driver' => 'mysql',
             'read' => [
                 'host' => [
                     'database-2.cluster-ro-cz8u6q66kiyy.eu-central-1.rds.amazonaws.com',
